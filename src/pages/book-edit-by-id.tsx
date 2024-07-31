@@ -2,7 +2,7 @@ import useSWR from "swr";
 import { Book } from "../lib/models";
 import { useNavigate, useParams } from "react-router-dom";
 import Layout from "../components/layout";
-import { Alert, Button, Checkbox, Container, Divider, NumberInput, TextInput } from "@mantine/core";
+import { Alert, Button, Checkbox, Container, Divider, NumberInput, TextInput, Select} from "@mantine/core";
 import Loading from "../components/loading";
 import { IconAlertTriangleFilled, IconTrash } from "@tabler/icons-react";
 import { isNotEmpty, useForm } from "@mantine/form";
@@ -166,7 +166,22 @@ export default function BookEditById() {
                 {/* TODO: เพิ่มรายละเอียดหนังสือ */}
                 {/* TODO: เพิ่มเรื่องย่อ */}
                 {/* TODO: เพิ่มหมวดหมู่(s) */}
-
+                <TextInput
+                  label="รายละเอียดหนังสือ"
+                  placeholder="รายละเอียดหนังสือ"
+                  {...bookEditForm.getInputProps("details")}
+                />
+                <TextInput
+                  label="เรื่องย่อ"
+                  placeholder="เรื่องย่อ"
+                  {...bookEditForm.getInputProps("short_details")}
+                />
+                <Select
+              label="หมวดหมู่"
+              placeholder="เลือกหมวดหมู่"
+              data={['การ์ตูน', 'นวนิยาย', 'วิชาการ', 'กีฬา', 'ธรรมมะ', 'อื่นๆ']}
+              {...bookEditForm.getInputProps("genre")}
+            />
                 <Checkbox
                   label="เผยแพร่"
                   {...bookEditForm.getInputProps("is_published", {
@@ -186,7 +201,7 @@ export default function BookEditById() {
                         title: "คุณต้องการลบหนังสือเล่มนี้ใช่หรือไม่",
                         children: (
                           <span className="text-xs">
-                            เมื่อคุณดำนเนินการลบหนังสือเล่มนี้แล้ว จะไม่สามารถย้อนกลับได้
+                            เมื่อคุณดำเนินการลบหนังสือเล่มนี้แล้ว จะไม่สามารถย้อนกลับได้
                           </span>
                         ),
                         labels: { confirm: "ลบ", cancel: "ยกเลิก" },

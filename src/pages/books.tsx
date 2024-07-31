@@ -14,7 +14,7 @@ export default function BooksPage() {
     <>
       <Layout>
         <section
-          className="h-[500px] w-full text-white bg-orange-800 bg-cover bg-blend-multiply flex flex-col justify-center items-center px-4 text-center"
+          className="h-[350px] w-full text-white bg-orange-800 bg-cover bg-blend-multiply flex flex-col justify-center items-center px-4 text-center"
           style={{
             backgroundImage: `url(${cafeBackgroundImage})`,
           }}
@@ -50,14 +50,16 @@ export default function BooksPage() {
             </Alert>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-10">
             {books?.map((book) => (
               <div className="border border-solid border-neutral-200" key={book.id}>
                 <img
-                  src="https://placehold.co/150x200"
+                  src={`https://placehold.co/150x200?text=${encodeURIComponent(book.title)}`}
                   alt={book.title}
-                  className="w-full object-cover aspect-[3/4]"
+                  className="w-full h-[250px] bg-neutral-100"
                 />
+  
+                 
                 <div className="p-4">
                   <h2 className="text-lg font-semibold line-clamp-2">{book.title}</h2>
                   <p className="text-xs text-neutral-500">โดย {book.author}</p>

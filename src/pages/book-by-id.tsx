@@ -41,28 +41,26 @@ export default function BookByIdPage() {
                   <h3>รายละเอียดหนังสือ</h3>
                   <p className="indent-4">
                     {/* TODO: เพิ่มรายละเอียดหนังสือ */}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, neque.
-                    Necessitatibus nihil quibusdam molestiae, asperiores nesciunt quod aliquid
-                    accusamus iusto sint amet optio laudantium eius, facilis iure ipsa assumenda
-                    alias pariatur! Quis ad ratione amet fugiat, et culpa cupiditate, veritatis
-                    beatae sed voluptatum a reprehenderit id odit quas? Enim, earum?
+                    <p className="indent-4">{book.details}</p>
                   </p>
 
                   <h3>เรื่องย่อ</h3>
                   <p className="indent-4">
                     {/* TODO: เพิ่มเรื่องย่อ */}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia officiis amet nemo
-                    ut placeat aliquam neque id voluptates quod nihil.
+                    <p className="indent-4">{book.short_details}</p>
+                  </p>
+                  
+                  <h3>ปีที่แต่ง</h3>
+                  <p className="indent-4">
+                    <p className="indent-4">{book.year}</p>
                   </p>
 
                   <h3>หมวดหมู่</h3>
                   {/* TODO: เพิ่มหมวดหมู่(s) */}
                   <div className="flex flex-wrap gap-2">
-                    <Badge color="teal">#หมวดหมู่ 1</Badge>
-                    <Badge color="teal">#หมวดหมู่ 2</Badge>
-                    <Badge color="teal">#หมวดหมู่ 3</Badge>
-                    <Badge color="teal">#หมวดหมู่ 4</Badge>
+                  <Badge color="teal">{book.genre}</Badge>
                   </div>
+
                 </div>
               </div>
 

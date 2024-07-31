@@ -14,6 +14,13 @@ import BookByIdPage from "./pages/book-by-id";
 import BookEditById from "./pages/book-edit-by-id";
 import { ModalsProvider } from "@mantine/modals";
 import BookCreatePage from "./pages/book-create";
+import MenuPage from "./pages/menu";
+import MenuCreatePage from "./pages/menu-create";
+import MenuByIdPage from "./pages/menu-by-id";
+import MenuDescription from "./pages/menu_decs";
+import OrderByIdPage from "./pages/order-by-id";
+import OrderPage from "./pages/order";
+
 
 const theme = createTheme({
   primaryColor: "orange",
@@ -41,6 +48,31 @@ const router = createBrowserRouter([
     path: "/books/:bookId/edit",
     element: <BookEditById />,
   },
+
+  {
+    path: "/menu",
+    element: <MenuPage />,
+  },
+  {
+    path: "/menu/:coffeeId",
+    element: <MenuDescription />,
+  },
+  {
+    path: "/menu/create",
+    element: <MenuCreatePage />,
+  },
+  {
+    path: "/coffee/:coffeeId",
+    element: <MenuByIdPage />,
+  },
+  {
+    path: "/orders/:orderId",
+    element: <OrderByIdPage />,
+  },
+  {
+    path: "order",
+    element: <OrderPage />,
+  }
 ]);
 
 if (import.meta.env.VITE_API_URL) {

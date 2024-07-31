@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/layout";
-import { Button, Checkbox, Container, Divider, NumberInput, TextInput } from "@mantine/core";
+import { Button, Checkbox, Container, Divider, NumberInput, Select, TextInput } from "@mantine/core";
 import { isNotEmpty, useForm } from "@mantine/form";
 import { useState } from "react";
 import axios, { AxiosError } from "axios";
@@ -92,8 +92,25 @@ export default function BookCreatePage() {
             />
 
             {/* TODO: เพิ่มรายละเอียดหนังสือ */}
+            <TextInput
+              label="รายละเอียดหนังสือ"
+              placeholder="รายละเอียดหนังสือ"
+              {...bookCreateForm.getInputProps("details")}
+            />
             {/* TODO: เพิ่มเรื่องย่อ */}
+            <TextInput
+              label="เรื่องย่อ"
+              placeholder="เรื่องย่อ"
+              {...bookCreateForm.getInputProps("short_details")}
+            />
             {/* TODO: เพิ่มหมวดหมู่(s) */}
+            <Select
+              label="หมวดหมู่"
+              placeholder="เลือกหมวดหมู่"
+              data={['การ์ตูน', 'นวนิยาย', 'วิชาการ', 'กีฬา', 'ธรรมมะ', 'อื่นๆ']}
+              {...bookCreateForm.getInputProps("genre")}
+            />
+
 
             <Checkbox
               label="เผยแพร่"

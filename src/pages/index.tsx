@@ -2,6 +2,7 @@ import Layout from "../components/layout";
 import cafeBackgroundImage from "../assets/images/bg-cafe-1.jpg";
 import ajPanwitImage from "../assets/images/aj-panwit.jpg";
 import coffeeImage from "../assets/images/coffee-1.jpg";
+import Tiger from "../assets/images/tiger.jpg";
 
 export default function HomePage() {
   return (
@@ -31,18 +32,19 @@ export default function HomePage() {
             <img src={ajPanwitImage} alt="Panwit Tuwanut" className="h-full w-full object-cover" />
           </div>
         </div>
-        <p className="text-right mt-8">
-          ปัจจุบันค่าเฟ่ และห้องสมุดของเรา อยู่ในช่วงการดูแลของ ....
+        <p className="text-left mt-8">
+          ปัจจุบันคาเฟ่ และห้องสมุดของเรา อยู่ในช่วงการดูแลของ <b>นายสุทธิเกียรติ หัทยาสมบูรณ์ 65070240 </b> ซึ่งเป็นลูกศิษย์ของอาจารย์ปานวิทย์ 
           {/* TODO: ชื่อของตนเอง, รหัสประจำตัวนักศึกษา และแนะนำคาเฟ่นี้ต่ออีกสักหน่อย + ใส่รูปของตนเอง (ไม่จำเป็นหากไม่สะดวกใจใส่รูป) */}
-          ซึ่งมีบริการ... Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-          placeat sit ea sapiente officia sunt cumque impedit, reiciendis quis eius asperiores!
-          Minus, mollitia? Vitae inventore odio quod ducimus similique, expedita sequi, reiciendis
-          rem recusandae impedit voluptatibus quo veritatis ut quis et suscipit? Eligendi, neque!
-          Earum quaerat unde similique totam. Pariatur!
+          <br></br>ซึ่งมีบริการ  กาแฟ ชา นม ในราคาย่อมเยาว์ และมีหนังสือให้เลือกอ่านมากมาย ภายใต้บรรยากาศที่สบายๆ และเงียบสงบ ที่เหมาะสำหรับการทำงานหรืออ่านหนังสือ<br></br>
+          อีกทั้งยังมีบริการอินเทอร์เน็ตฟรี สำหรับลูกค้าที่ต้องการใช้บริการอินเทอร์เน็ต เพียงเต้นเพลงยายแล่มอีตอนสาวๆ ให้ผู้ดูแลสุดหล่อดู รับรหัส wifi ไปเลย ยังไม่หมด!!! <br></br> 
+          คาเฟ่เรายังมีโซนถ่ายรูปไว้ลงโซเชียลสวยๆอวดเพื่อนอวดพี่อวดน้องอวดลุงป้าน้าอาอีกด้วยอีกด้วย แล้วแวะมาใช้บริการร้านคาเฟ่หนังสือของเรากันเยอะๆนะครับบบบบ
+
         </p>
       </section>
-
-      <section className="w-full flex justify-center">
+      <section className="w-4/12 flex justify-center items-center mx-20">
+         <img src={Tiger} alt="Tiger" className="w-full" />
+      </section>
+      <section className="w-full my-10 h-screen flex justify-center " >
         <img src={coffeeImage} alt="Coffee" className="w-full" />
       </section>
     </Layout>

@@ -31,12 +31,19 @@ export default function Layout({ children }: LayoutProps) {
                 หนังสือ
               </Link>
 
-              {/* <Link
+              <Link
                 to={"/menu"}
                 className="flex items-center h-14 px-1 no-underline text-neutral-600 font-semibold text-sm"
               >
                 เมนู
-              </Link> */}
+              </Link>
+
+              <Link
+                to={"/order"}
+                className="flex items-center h-14 px-1 no-underline text-neutral-600 font-semibold text-sm"
+              >
+                ออเดอร์
+              </Link>
             </Group>
 
             <div></div>
