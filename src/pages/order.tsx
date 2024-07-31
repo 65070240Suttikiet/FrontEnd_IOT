@@ -17,7 +17,7 @@ export default function OrderPage() {
   const { data: orders, error: ordersError } = useSWR<Order[]>(`/order/`);
   useSWR<Order>(`/order/${ordersID}`);
   const { data: coffees, error: coffeesError } = useSWR<Coffee[]>("/coffee/");
-  const [isProcessing, setIsProcessing] = useState(false);
+  const [, setIsProcessing] = useState(false);
  
 
   // เพิ่ม orderID ในฟังก์ชัน handleDelete
@@ -130,7 +130,7 @@ export default function OrderPage() {
                           ),
                           labels: { confirm: "ลบ", cancel: "ยกเลิก" },
                           onConfirm: () => {
-                            handleDelete(order.id);
+                            handleDelete(order.id.toString());
                           },
                           confirmProps: {
                             color: "red",
